@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GUI.dto
 {
-    interface IWritableDTO
+    interface IWritable
     {
         string Name { get; set; }
         int Size { get; set; }

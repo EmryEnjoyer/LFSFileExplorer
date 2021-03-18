@@ -9,7 +9,7 @@ namespace GUI.Objects
 {
     interface IInteractable
     {
-        void Write();
+        void Write(byte[] data);
         byte[] Read();
         void Delete(); 
         

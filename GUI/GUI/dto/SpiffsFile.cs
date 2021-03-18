@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace GUI.dto
 {
-    class SPIFFSFileDTO : IWritableDTO
+    class SpiffsFile : IWritable
     {
-        public List<SPIFFSDirectoryDTO> Path { get; set; }
+        public List<SpiffsDirectory> Path { get; set; }
         public string Name { get; set; }
         public int Size { get; set; }
         public bool CanRead { get; set; }

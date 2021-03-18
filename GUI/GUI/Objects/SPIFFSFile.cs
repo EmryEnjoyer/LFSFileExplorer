@@ -7,16 +7,23 @@ using System.Threading.Tasks;
 
 namespace GUI.Objects
 {
-    class SPIFFSFile : IInteractable
+    class SpiffsFile : IInteractable
     {
-        public string Name { get; set; }
+        public string name { get; set; }
+        public int size { get; set; }
+        public bool canRead { get; set; }
+        public bool canWrite { get; set; }
+        public byte[] contents { get; set; }
 
-        private static List<SPIFFSFile> cache;
-        private SPIFFSFileDTO data;
-        public SPIFFSFile(SPIFFSFileDTO data)
+        private static List<SpiffsFile> cache;
+        public SpiffsFile(dto.SpiffsFile data)
         {
             cache.Append(this);
-            this.data = data;
+            name = data.Name;
+            size = data.Size;
+            canRead = data.CanRead;
+            canWrite = data.CanWrite;
+            contents = data.Contents;
         }
         
 
@@ -30,25 +37,9 @@ namespace GUI.Objects
             throw new NotImplementedException();
         }
 
-        public void Write()
+        public void Write(byte[] content)
         {
             throw new NotImplementedException();
-        }
-        public string getName()
-        {
-            return data.Name;
-        }
-        public int getSize()
-        {
-            return data.Size;
-        }
-        public bool getCanRead()
-        {
-            return data.CanRead;
-        }
-        public bool getCanWrite()
-        {
-            return data.CanWrite;
         }
     }
 }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace GUI.dto
 {
-    class SPIFFSDirectoryDTO : IWritableDTO
+    class SpiffsDirectory : IWritable
     {
-        public List<SPIFFSFileDTO> Children { get; set; }
-        public List<SPIFFSDirectoryDTO> ChildDirectories { get; set; }
+        public List<SpiffsFile> Children { get; set; }
+        public List<SpiffsDirectory> ChildDirectories { get; set; }
         public string Name { get; set; }
         public int Size { get; set; }
         public bool CanRead { get; set; }

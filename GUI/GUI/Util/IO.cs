@@ -1,9 +1,6 @@
 ﻿using GUI.dto;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace GUI.Util
 {
@@ -13,7 +10,7 @@ namespace GUI.Util
         {
             throw new NotImplementedException();
         }
-        public bool WriteToSerial<T>(T dto) where T : IWritableDTO
+        public bool WriteToSerial<T>(T dto) where T : IWritable
         {
             throw new NotImplementedException();
         }
